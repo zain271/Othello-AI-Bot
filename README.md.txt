@@ -1,7 +1,6 @@
 # Othello AI Bot
 
-A Python-based Othello game AI project featuring multiple agents, including 
-a random player, Minimax, and Monte Carlo Tree Search (MCTS).
+A Python-based Othello game AI project featuring multiple agents, including a random player, Minimax, and Monte Carlo Tree Search (MCTS).
 
 ## Features
 - Othello game implementation in Python
@@ -10,41 +9,14 @@ a random player, Minimax, and Monte Carlo Tree Search (MCTS).
 - MCTS AI agent
 - GUI/game runner support
 
-## Files
-- `mcts_ai.py` – Monte Carlo Tree Search player
-- `minimax_ai.py` – Minimax-based player
-- `randy_ai.py` – Random baseline player
-- `othello_game.py` – Game runner / main logic
-- `othello_gui.py` – GUI support
-- `othello_shared.py` – Shared helper functions and board logic
-
-## How to Run
+## ----- How to Run ------
 Run games from the terminal using the following commands:
-
-### Random vs Random
-```bash
-py othello_game.py randy_ai.py randy_ai.py
-```
-
-### Minimax vs Random
-```bash
-py othello_game.py minimax_ai.py randy_ai.py
-```
-
-### MCTS vs Random
-```bash
-py othello_game.py mcts_ai.py randy_ai.py
-```
-
-### MCTS vs Minimax
-```bash
-py othello_game.py mcts_ai.py minimax_ai.py
-```
-
-### GUI Version
-```bash
-py othello_gui.py
-```
+py othello_gui.py -d 8 -a randy_ai.py              ### YOU vs Random AI
+py othello_gui.py -d 8 -a minimax_ai.py            ### YOU vs Minimax AI
+py othello_gui.py -d 8 -a mcts_ai.py -l 1000 -h    ### YOU vs MCTS AI
+py othello_gui.py -d 8 -a randy_ai.py -b randy_ai.py            ### Random AI vs Random AI
+py othello_gui.py -d 8 -a mcts_ai.py -b randy_ai.py -l 1000     ### MCTS AI vs Random AI
+py othello_gui.py -d 8 -a mcts_ai.py -b minimax_ai.py -l 1000   ### MCTS AI vs Minimax AI
 
 ## Notes
 This project was built as part of an AI-focused academic assignment and 
